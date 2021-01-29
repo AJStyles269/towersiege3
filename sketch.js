@@ -16,9 +16,9 @@ var player;
 
 var ball;
 var img;
-var back;
+var back="back2. jpg"
 var scoregame = 0;
-
+var backImg 
 
 function preload(){
   img = loadImage("hexagon (1).png");
@@ -82,8 +82,10 @@ function setup() {
 
 function draw() {
   
-  if(back) 
-  background(back);
+  if(backImg) 
+  background(backImg);
+  else
+  background(0);
   //Engine.update(engine);
 
   fill(rgb(135, 205, 236));
@@ -197,11 +199,11 @@ async function getTime() {
   console.log(hr);
 
   if(hr >= 6 && hr <=18) {
-      back = "sprites/bg1.jpg";
+      back = "back2.jpg";
   } else {
-    back = "sprites/bg2.jpg";
+    back = "back.jpg";
   }
 
-  back= loadImage(back);
+  backImg= loadImage(back);
   console.log(back)
 }
